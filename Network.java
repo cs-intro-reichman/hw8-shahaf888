@@ -160,17 +160,11 @@ public class Network {
     public String toString() {
 
         String ans = "Network:";
-
-        if (userCount > 0){
-            ans = ans + "\n";
-        }
         for (int i = 0; i < users.length; i++){
-            if (this.users[i] != null  && i != (users.length - 1)){
-                ans = ans + users[i].toString() + "\n";
+            if (this.users[i] != null){
+                ans = ans + "\n" + users[i].toString();
             }
-            else if (this.users[i] != null  && i == (users.length - 1)){
-                ans = ans + users[i].toString();
-            }
+
         }
         return ans;
     }
