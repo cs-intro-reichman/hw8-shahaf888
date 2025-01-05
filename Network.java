@@ -124,6 +124,9 @@ public class Network {
 
             }
         }
+        if (mostPopUser == null){
+            return null;
+        }
         theName = mostPopUser.getName();
         return theName;
     }
