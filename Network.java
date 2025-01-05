@@ -160,7 +160,8 @@ public class Network {
     public String toString() {
 
         String ans = "Network:";
-        if (users.length > 0){
+
+        if (userCount > 0){
             ans = ans + "\n";
         }
         for (int i = 0; i < users.length; i++){
