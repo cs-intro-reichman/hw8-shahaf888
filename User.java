@@ -78,7 +78,10 @@
      *  If the name is not in the list, does nothing and returns false. */
     public boolean removeFollowee(String name) {
         //check if name string is null
-        if (!follows(name) || name == null || name.isEmpty()){
+        if (name == null){
+            return false;
+        }
+        if (!follows(name)){
             return false;
         }
         boolean helper = true;
