@@ -72,7 +72,7 @@
     /** Removes the given name from the follows list of this user. If successful, returns true.
      *  If the name is not in the list, does nothing and returns false. */
     public boolean removeFollowee(String name) {
-        
+        //check if name string is null
         if (!follows(name) || name == null){
             return false;
         }
