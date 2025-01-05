@@ -85,7 +85,7 @@ public class Network {
             return false;
         }
 
-        if (name1 == name2){
+        if (name1.equals(name2)){
             return false;
         }
 
