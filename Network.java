@@ -29,13 +29,23 @@ public class Network {
      *  If there is no such user, returns null.
      *  Notice that the method receives a String, and returns a User object. */
     public User getUser(String name) {
-        for (int i = 0; i < users.length; i++){
-            if(users[i] != null){
-                if (name.equals(users[i].getName())){
-                    return users[i];
+        if (name != null || !name.isEmpty()){
+            //adding
+            if (name.charAt(0) >= 'a' && name.charAt(0) <= 'z'){
+                char c = (char) (name.charAt(0) - 32);
+                name = name.substring(1);
+                name = c + name;
+            }
+            //
+            for (int i = 0; i < users.length; i++){
+                if(users[i] != null){
+                    if (name.equals(users[i].getName())){
+                        return users[i];
+                    }
                 }
             }
         }
+
         return null;
     }
 

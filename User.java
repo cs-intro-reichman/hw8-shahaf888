@@ -43,9 +43,14 @@
 
     /** If this user follows the given name, returns true; otherwise returns false. */
     public boolean follows(String name) {
+        if (name == null){
+            return false;
+        }
         for(int i = 0; i < follows.length; i++){
-            if(name.equals(follows[i])){
-                return true;
+            if (follows[i] != null){
+                if(name.toLowerCase().equals(follows[i].toLowerCase())){
+                    return true;
+                }
             }
         }
         return false;
