@@ -148,8 +148,11 @@ public class Network {
 
         String ans = "Network:\n";
         for (int i = 0; i < users.length; i++){
-            if (this.users[i] != null){
+            if (this.users[i] != null  && i != (users.length - 1)){
                 ans = ans + users[i].toString() + "\n";
+            }
+            else if (this.users[i] != null  && i == (users.length - 1)){
+                ans = ans + users[i].toString();
             }
         }
         return ans;
